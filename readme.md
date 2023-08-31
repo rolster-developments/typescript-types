@@ -16,6 +16,6 @@ The package path must be added in the `files` property in the `tsconfig.json` fi
 }
 ```
 
-<p>
-  <b>Author:</b> Daniel Andrés Castillo Pedroza
-</p>
+### Author
+
+`Daniel Andrés Castillo Pedroza`

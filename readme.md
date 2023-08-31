@@ -1,8 +1,12 @@
-# @rolster/typescript-types
+# Rolster Typescript Types
 
 Package containing the basic definitions for handling data types.
 
-## Usage
+## Installation
+
+`npm i @rolster/typescript-types`
+
+## Implementation
 
 The package path must be added in the `files` property in the `tsconfig.json` file
 

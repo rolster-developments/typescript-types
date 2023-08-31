@@ -4,7 +4,9 @@ Package containing the basic definitions for handling data types.
 
 ## Installation
 
-`npm i @rolster/typescript-types`
+```
+npm i @rolster/typescript-types
+```
 
 ## Implementation
 
@@ -18,4 +20,5 @@ The package path must be added in the `files` property in the `tsconfig.json` fi
 
 ### Author
 
-`Daniel Andrés Castillo Pedroza`
+Daniel Andrés Castillo Pedroza
+`Developer`

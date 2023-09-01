@@ -37,7 +37,7 @@ const value2: Nulleable<boolean> = false || null;
 
 // Variable can contain an number|unknown value
 const value3: Unknown<number> = 1044 || unknown;
-``
+```
 
 ## Contributors
 

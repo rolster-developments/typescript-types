@@ -14,7 +14,7 @@ The package path must be added in the `files` property in the `tsconfig.json` fi
 
 ```json
 {
-  "files": ["node_modules/@xofttion/types/index.d.ts"]
+  "files": ["node_modules/@rolster/typescript-types/index.d.ts"]
 }
 ```
 
@@ -41,4 +41,4 @@ const value3: Unknown<number> = 1044 || unknown;
 
 ## Contributors
 
-- :rocket: Daniel Andrés Castillo Pedroza
+- Daniel Andrés Castillo Pedroza :rocket:

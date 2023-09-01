@@ -18,13 +18,13 @@ The package path must be added in the `files` property in the `tsconfig.json` fi
 }
 ```
 
-## Types
+## Interfaces
 
-| Interfaces     | Description                                                        |
-| -------------- | ------------------------------------------------------------------ |
-| `Undefined<T>` | Interface that allows to type a generic data with undefined value. |
-| `Nulleable<T>` | Interface that allows to type a generic data with nulleable value. |
-| `Unknown<T>`   | Interface that allows to type a generic data with unknown value.   | 
+| Name           | Description                                         |
+| -------------- | --------------------------------------------------- |
+| `Undefined<T>` | Allows to type a generic data with undefined value. |
+| `Nulleable<T>` | Allows to type a generic data with nulleable value. |
+| `Unknown<T>`   | Allows to type a generic data with unknown value.   | 
 
 ## Implementation
 
@@ -39,6 +39,6 @@ const value2: Nulleable<boolean> = false || null;
 const value3: Unknown<number> = 1044 || unknown;
 ```
 
-## Contributors
+## Contributing
 
 - Daniel Andrés Castillo Pedroza :rocket:

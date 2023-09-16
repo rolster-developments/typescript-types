@@ -1,15 +1,22 @@
 {
-  "name": "@rolster/typescript-types",
-  "version": "4.0.0",
+  "name": "@rolster/types",
+  "version": "1.0.0",
   "description": "Package containing the basic definitions for handling data types.",
-  "author": "Daniel Andrés Castillo Pedroza",
   "license": "MIT",
   "types": "index.d.ts",
+  "author": "Rolster Technology <rolster.developments@gmail.com>",
+  "contributors": [
+    {
+      "name": "Daniel Andrés Castillo Pedroza",
+      "email": "ing.dacastillop@gmail.com"
+    }
+  ],
   "devDependencies": {
     "typescript": "^4.9.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/rolster-developments/typescript-types.git"
-  }
+  },
+  "keywords": ["rolster", "typescript", "types"]
 }

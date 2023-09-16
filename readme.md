@@ -1,11 +1,11 @@
-# Rolster Typescript Types
+# Rolster Types
 
 Package containing the basic definitions for handling data types.
 
 ## Installation
 
 ```
-npm i @rolster/typescript-types
+npm i @rolster/types
 ```
 
 ## Configuration
@@ -14,7 +14,7 @@ The package path must be added in the `files` property in the `tsconfig.json` fi
 
 ```json
 {
-  "files": ["node_modules/@rolster/typescript-types/index.d.ts"]
+  "files": ["node_modules/@rolster/types/index.d.ts"]
 }
 ```
 
@@ -24,7 +24,7 @@ The package path must be added in the `files` property in the `tsconfig.json` fi
 | -------------- | --------------------------------------------------- |
 | `Undefined<T>` | Allows to type a generic data with undefined value. |
 | `Nulleable<T>` | Allows to type a generic data with nulleable value. |
-| `Unknown<T>`   | Allows to type a generic data with unknown value.   | 
+| `Unknown<T>`   | Allows to type a generic data with unknown value.   |
 
 ## Implementation
 

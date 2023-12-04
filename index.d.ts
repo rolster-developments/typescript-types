@@ -10,7 +10,7 @@ declare global {
   };
 
   type NullableObject<T> = {
-    [K in keyof T]: Nullable<T[K]>;
+    [K in keyof T]: Nulleable<T[K]>;
   };
 
   type UnknownObject<T> = {

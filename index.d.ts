@@ -18,6 +18,8 @@ declare global {
   };
 
   type LiteralObject<T = any> = Record<string, T>;
+
+  type Unsubscription = () => void;
 }
 
 export {};

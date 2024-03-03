@@ -20,6 +20,8 @@ declare global {
   type LiteralObject<T = any> = Record<string, T>;
 
   type Unsubscription = () => void;
+
+  type OneOrMany<T> = T | T[];
 }
 
 export {};

@@ -1,6 +1,6 @@
 {
   "name": "@rolster/types",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Package containing the basic definitions for handling data types.",
   "license": "MIT",
   "types": "index.d.ts",

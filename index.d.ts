@@ -22,6 +22,8 @@ declare global {
   type Unsubscription = () => void;
 
   type OneOrMany<T> = T | T[];
+
+  type ValueOrFunction<T> = T | (() => T);
 }
 
 export {};

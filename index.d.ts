@@ -24,6 +24,12 @@ declare global {
   type OneOrMany<T> = T | T[];
 
   type ValueOrFunction<T> = T | (() => T);
+
+  type KeysOmit<T, V> = {
+    [K in keyof T]: T[K] extends V ? never : K;
+  }[keyof T];
+
+  type KeysOmitFunction<T> = KeysOmit<T, Function>;
 }
 
 export {};

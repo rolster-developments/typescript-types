@@ -18,5 +18,9 @@
     "type": "git",
     "url": "https://github.com/rolster-developments/typescript-types.git"
   },
-  "keywords": ["rolster", "typescript", "types"]
+  "keywords": [
+    "rolster",
+    "typescript",
+    "types"
+  ]
 }

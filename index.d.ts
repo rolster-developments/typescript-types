@@ -3,6 +3,8 @@ declare global {
   type Nulleable<T> = T | null;
   type Unknown<T> = T | unknown;
 
+  type NonUndefined<T> = T extends undefined ? never : T;
+
   type Any<T extends Object> = string | number | symbol | boolean | T;
 
   type UndefinedObject<T> = {

@@ -19,7 +19,7 @@ declare global {
     [K in keyof T]: Unknown<T[K]>;
   };
 
-  type LiteralObject<T = any> = Record<string | number | symbol, T>;
+  type LiteralObject<T = any, K = string | number | symbol> = Record<K, T>;
 
   type Unsubscription = () => void;
 

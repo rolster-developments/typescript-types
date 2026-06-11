@@ -1,6 +1,6 @@
 {
   "name": "@rolster/types",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Package containing the basic definitions for handling data types.",
   "license": "MIT",
   "author": "Rolster Technology <rolster.developments@gmail.com>",
@@ -17,7 +17,7 @@
     }
   },
   "devDependencies": {
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.3"
   },
   "repository": {
     "type": "git",

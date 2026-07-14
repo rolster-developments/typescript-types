@@ -1,7 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -13,9 +13,9 @@
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-empty-function": "off",
     "simple-import-sort/imports": [
-      "warning",
+      "warn",
       {
-        "groups": [["^@", "^\\w"], ["^\\."], ["^\\u0000"]]
+        "groups": [["^@"], ["^\\w"], ["^\\."], ["^\\u0000"]]
       }
     ],
     "simple-import-sort/exports": "error"

@@ -5,7 +5,7 @@ declare global {
 
   type NonUndefined<T> = T extends undefined ? never : T;
 
-  type Any<T extends Object> = string | number | symbol | boolean | T;
+  type Any<T extends object> = string | number | symbol | boolean | T;
 
   type UndefinedObject<T> = {
     [K in keyof T]: Undefined<T[K]>;
@@ -31,7 +31,7 @@ declare global {
     [K in keyof T]: T[K] extends V ? never : K;
   }[keyof T];
 
-  type KeysOmitFunction<T> = KeysOmit<T, Function>;
+  type KeysOmitFunction<T> = KeysOmit<T, (...args: any[]) => any>;
 }
 
 export {};

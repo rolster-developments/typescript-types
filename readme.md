@@ -90,4 +90,4 @@ const off: Unsubscription = () => {};
 
 ## Contributing
 
-:sparkles: Daniel Andrés Castillo Pedroza 
+:sparkles: Daniel Andrés Castillo Pedroza

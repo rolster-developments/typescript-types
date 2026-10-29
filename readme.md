@@ -25,22 +25,24 @@ runtime code and its `package.json` exposes only a `types` export, so
 
 ## Types
 
-| Name                                                     | Description                                                                                            |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `Undefined<T>`                                           | `T \| undefined`.                                                                                      |
-| `Nulleable<T>`                                           | `T \| null`.                                                                                           |
-| `Unknown<T>`                                             | `T \| unknown`, which TypeScript collapses to `unknown`; the generic only documents the intended type. |
-| `NonUndefined<T>`                                        | Excludes `undefined` from `T`.                                                                         |
-| `Any<T extends object>`                                  | `string \| number \| symbol \| boolean \| T` — a primitive or the given object type.                   |
-| `UndefinedObject<T>`                                     | Every property of `T` may also be `undefined`.                                                         |
-| `NullableObject<T>`                                      | Every property of `T` may also be `null`.                                                              |
-| `UnknownObject<T>`                                       | Every property of `T` becomes `unknown` (see `Unknown<T>`).                                            |
-| `LiteralObject<T = any, K = string \| number \| symbol>` | `Record<K, T>` — a plain key/value object.                                                             |
-| `Unsubscription`                                         | `() => void` — function returned by subscriptions to detach them.                                      |
-| `OneOrMany<T>`                                           | `T \| T[]`.                                                                                            |
-| `ValueOrFunction<T>`                                     | `T \| (() => T)` — a value or a factory that produces it.                                              |
-| `KeysOmit<T, V>`                                         | Keys of `T` whose value type is not assignable to `V`.                                                 |
-| `KeysOmitFunction<T>`                                    | Keys of `T` that are not functions (`KeysOmit<T, (...args: any[]) => any>`).                           |
+| Name                                                                       | Description                                                                                            |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `Undefined<T>`                                                             | `T \| undefined`.                                                                                      |
+| `Nulleable<T>`                                                             | `T \| null`.                                                                                           |
+| `Nullish<T>`                                                               | `T \| null \| undefined` — both absent values at once.                                                 |
+| `Unknown<T>`                                                               | `T \| unknown`, which TypeScript collapses to `unknown`; the generic only documents the intended type. |
+| `NonUndefined<T>`                                                          | Excludes `undefined` from `T`.                                                                         |
+| `Any<T extends object>`                                                    | `string \| number \| symbol \| boolean \| T` — a primitive or the given object type.                   |
+| `UndefinedObject<T>`                                                       | Every property of `T` may also be `undefined`.                                                         |
+| `NullableObject<T>`                                                        | Every property of `T` may also be `null`.                                                              |
+| `UnknownObject<T>`                                                         | Every property of `T` becomes `unknown` (see `Unknown<T>`).                                            |
+| `LiteralObject<T = any, K extends keyof any = string \| number \| symbol>` | `Record<K, T>` — a plain key/value object.                                                             |
+| `Unsubscription`                                                           | `() => void` — function returned by subscriptions to detach them.                                      |
+| `OneOrMany<T>`                                                             | `T \| T[]`.                                                                                            |
+| `ValueOrFunction<T>`                                                       | `T \| (() => T)` — a value or a factory that produces it.                                              |
+| `Awaitable<T>`                                                             | `T \| Promise<T>` — a value that may or may not arrive asynchronously.                                 |
+| `KeysOmit<T, V>`                                                           | Keys of `T` whose value type is not assignable to `V`.                                                 |
+| `KeysOmitFunction<T>`                                                      | Keys of `T` that are not functions (`KeysOmit<T, (...args: any[]) => any>`).                           |
 
 ## Implementation
 
@@ -70,6 +72,15 @@ const ids: OneOrMany<number> = [1, 2, 3];
 
 // A value or a factory producing it
 const lazyName: ValueOrFunction<string> = () => 'Daniel';
+
+// Absent either way
+let token: Nullish<string> = null;
+token = undefined;
+
+// Accepts both a plain value and a promise of it
+async function resolve(input: Awaitable<User>): Promise<User> {
+  return await input;
+}
 
 // 'id' | 'name' (methods are excluded)
 const field: KeysOmitFunction<User> = 'name';
